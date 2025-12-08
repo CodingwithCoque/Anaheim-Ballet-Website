@@ -1,0 +1,248 @@
+/* Ballet Theme Styles */
+
+:root {
+    --ballet-pink: #f9d5e5;
+    --rose-quartz: #e7b2c0;
+    --dusty-rose: #d291bc;
+    --soft-gray: #f5f5f5;
+    --dark-gray: #555;
+    --white: #ffffff;
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Lato", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--soft-gray);
+    font-family: var(--font-body);
+    color: var(--dark-gray);
+  }
+  
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--dusty-rose);
+  }
+  
+  /* NavBar theme */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: var(--dusty-rose);
+  }
+  
+  /* Homepage Theme*/
+
+
+/* HERO SECTION */
+.hero {
+  background-image: url("/src/assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-overlay {
+  background: linear-gradient(rgba(255, 225, 235, 0.6), rgba(255, 245, 250, 0.85));
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+
+  text-align: center; /* center text */
+  backdrop-filter: blur(2px);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #9c4f7f; /* dusty ballet tone */
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin-bottom: 1rem;
+}
+
+/* Center the buttons too */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* BUTTON STYLES */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px; /* << Rounded pill shape */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Pink primary ballet button */
+.btn-primary {
+  background-color: var(--dusty-rose, #d48aa6);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #c07693;
+  transform: translateY(-2px);
+}
+
+/* White outlined secondary ballet button */
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid var(--dusty-rose, #d48aa6);
+  color: var(--dusty-rose, #d48aa6);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dusty-rose, #d48aa6);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* For centering the buttons row */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+/* CAROUSEL */
+.carousel-section img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.carousel-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 300px;     /* Smaller compact height */
+  object-fit: cover; /* Ensures all images crop consistently */
+  border-radius: 12px;
+}
+
+
+
+/* FEATURE CARDS */
+.feature-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--soft-gray);
+}
+
+.newsletter-form {
+  margin-top: 1rem;
+}
+
+.newsletter-form input {
+  padding: 0.6rem;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid var(--dusty-rose);
+}
+
+.newsletter-form button {
+  padding: 0.6rem 1rem;
+  background-color: var(--dusty-rose);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+/* Carousel Theme */
+.slick-slide img {
+  border-radius: 12px;
+}
+
+.slick-dots li button:before {
+  color: var(--dusty-rose);
+}
+
+

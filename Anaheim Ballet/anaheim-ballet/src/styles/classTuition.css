@@ -1,0 +1,125 @@
+.class-page-container {
+    font-family: var(--ballet-font);
+    padding-bottom: 40px;
+  }
+  
+  /* ===== HERO SECTION ===== */
+  .class-hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  
+  .class-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .class-hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.45);
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .class-buttons {
+    margin-top: 15px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .primary-btn {
+    background: #e8bcdc;
+    color: #4b1f3a;
+  }
+  
+  .secondary-btn {
+    background: white;
+    color: #333;
+  }
+  
+  /* ===== LEVEL BUTTONS ===== */
+  .level-selector {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .level-buttons button {
+    margin: 6px;
+    padding: 10px 16px;
+    border: 1px solid #d7b3c7;
+    border-radius: 6px;
+    background: #f9f1f5;
+    cursor: pointer;
+  }
+  
+  /* ===== CALENDAR PLACEHOLDER ===== */
+  .calendar-container {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .calendar-placeholder {
+    height: 250px;
+    border: 2px dashed #d7b3c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6a4560;
+    font-style: italic;
+  }
+  
+  /* ===== INSTRUCTOR LIST ===== */
+  .instructor-list {
+    margin: 30px auto;
+    width: 80%;
+    text-align: left;
+  }
+  
+  /* ===== TUITION CARDS ===== */
+  .tuition-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .tuition-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .tuition-card {
+    width: 250px;
+    padding: 20px;
+    background: #f7eff5;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* ===== POLICIES ===== */
+  .policies-section {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f3e5ef;
+    border-radius: 10px;
+  }
+  
