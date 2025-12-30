@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import ballet1 from "../assets/images/ballet1.jpg";
 import ballet2 from "../assets/images/ballet2.jpg";
 import ballet3 from "../assets/images/ballet3.jpg";
+import company from "../assets/images/company.jpg";
+import school from "../assets/images/school.jpg";
+import events from "../assets/images/events.jpg";
 import "../styles/theme.css";
 
 function Home() {
@@ -73,21 +76,21 @@ function Home() {
             {/* FEATURE CARDS */}
             <section className="feature-section">
                 <div className="feature-card">
-                    <img src="https://i.imgur.com/Q0yPZkL.jpeg" alt="Company" />
+                    <img src={company} alt="Company" />
                     <h3>AB Company</h3>
                     <p>Meet our dancers, directors, and artistic leaders.</p>
                     <a href="/ab-company">Learn More →</a>
                 </div>
 
                 <div className="feature-card">
-                    <img src="https://i.imgur.com/OWDfv2e.jpeg" alt="School" />
+                    <img src={school} alt="School" />
                     <h3>AB School</h3>
                     <p>Explore our classes, faculty, and training programs.</p>
                     <a href="/ab-school">Learn More →</a>
                 </div>
 
                 <div className="feature-card">
-                    <img src="https://i.imgur.com/OKcAbvB.jpeg" alt="Events" />
+                    <img src={events} alt="Events" />
                     <h3>Events</h3>
                     <p>See upcoming performances and community showcases.</p>
                     <a href="/events">Learn More →</a>

@@ -3,22 +3,26 @@ import db from "../db.js";
 
 const router = express.Router();
 
-// SAVE CONTACT MESSAGE
-router.post("/send", (req, res) => {
+router.post("/", (req, res) => {
   const { name, email, subject, message } = req.body;
 
-  if (!name || !email || !subject || !message)
-    return res.status(400).json({ error: "All fields are required" });
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "Required fields missing" });
+  }
 
-  db.query(
-    "INSERT INTO messages (name, email, subject, message) VALUES (?, ?, ?, ?)",
-    [name, email, subject, message],
-    (err) => {
-      if (err) return res.status(500).json({ error: err });
+  const sql = `
+    INSERT INTO messages (name, email, subject, message)
+    VALUES (?, ?, ?, ?)
+  `;
 
-      res.json({ message: "Message sent successfully!" });
+  db.query(sql, [name, email, subject, message], (err) => {
+    if (err) {
+      console.error("DB Error:", err);
+      return res.status(500).json({ error: "Database insert failed" });
     }
-  );
+
+    res.json({ message: "Message sent successfully" });
+  });
 });
 
 export default router;

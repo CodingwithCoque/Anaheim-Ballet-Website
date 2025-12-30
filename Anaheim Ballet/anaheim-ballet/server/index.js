@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-
 import authRoutes from "./routes/auth.js";
 import contactRoutes from "./routes/contact.js";
 import newsletterRoutes from "./routes/newsletter.js";
@@ -11,7 +10,7 @@ dotenv.config();
 const app = express();
 
 /**
- * ✅ CORS — MUST COME FIRST
+ *CORS 
  */
 app.use(
   cors({
@@ -22,18 +21,10 @@ app.use(
   })
 );
 
-/**
- * ✅ HANDLE PREFLIGHT REQUESTS EXPLICITLY
- 
-app.options("*", cors()); */
-
-/**
- * ✅ BODY PARSER
- */
 app.use(express.json());
 
 /**
- * ✅ DEBUG LOG (temporary)
+ * DEBUG LOG
  */
 app.use((req, res, next) => {
   console.log(`➡️ ${req.method} ${req.url}`);
@@ -41,21 +32,21 @@ app.use((req, res, next) => {
 });
 
 /**
- * ✅ ROUTES
+ *ROUTES
  */
 app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/newsletter", newsletterRoutes);
 
 /**
- * ✅ ROOT TEST
+ *ROOT TEST
  */
 app.get("/", (req, res) => {
   res.send("API running");
 });
 
 /**
- * ✅ START SERVER
+ *START SERVER
  */
 app.listen(5001, () => {
   console.log("🔥 Backend running on http://localhost:5001");

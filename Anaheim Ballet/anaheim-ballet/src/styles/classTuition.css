@@ -87,10 +87,43 @@
   
   /* ===== INSTRUCTOR LIST ===== */
   .instructor-list {
-    margin: 30px auto;
-    width: 80%;
-    text-align: left;
+    margin-top: 4rem;
   }
+  
+  .instructor-list h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #b27ab4;
+  }
+  
+  /* GRID LAYOUT */
+  .instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem 2rem;
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* INDIVIDUAL ITEM */
+  .instructor-grid li {
+    background: #faf7fb;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* INITIALS STYLING */
+  .instructor-grid strong {
+    color: #7a3b7d;
+    font-weight: 700;
+    margin-right: 0.3rem;
+  }
+  
   
   /* ===== TUITION CARDS ===== */
   .tuition-section {

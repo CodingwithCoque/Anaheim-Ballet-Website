@@ -1,0 +1,66 @@
+.ab-school-faculty {
+    margin-top: 4rem;
+  }
+  
+  .faculty-intro {
+    max-width: 850px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  
+  .faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  /* FLIP CARD */
+  .faculty-card {
+    perspective: 1200px;
+  }
+  
+  .faculty-card .card-inner {
+    position: relative;
+    height: 380px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .faculty-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .faculty-card .card-front,
+  .faculty-card .card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    background: #faf8f6;
+    border-radius: 6px;
+    padding: 1.5rem;
+  }
+  
+  .faculty-card .card-front {
+    text-align: center;
+  }
+  
+  .faculty-card .card-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+  }
+  
+  .faculty-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  .faculty-role {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7a5c5c;
+  }
+  

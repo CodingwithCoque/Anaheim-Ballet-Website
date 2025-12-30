@@ -1,23 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../styles/theme.css";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/images/anaheim-logo.jpeg";
+import "../styles/navbar.css";
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="nav-logo">
-        <Link to="/">Anaheim Ballet</Link>
+    <header className="navbar">
+      {/* Logo Section (redirects to Home) */}
+      <div className="navbar-logo">
+        <Link to="/">
+          <img src={logo} alt="Anaheim Ballet Logo" />
+        </Link>
       </div>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/ab-company">AB Company</Link></li>
-        <li><Link to="/ab-school">AB School</Link></li>
-        <li><Link to="/events">Events</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    </nav>
+
+      {/* Navigation Links */}
+      <nav className="navbar-links">
+        <NavLink to="/ab-company">AB Company</NavLink>
+        <NavLink to="/ab-school">AB School</NavLink>
+        <NavLink to="/events">Events</NavLink>
+        <NavLink to="/gallery">Gallery</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </nav>
+    </header>
   );
-};
+}
 
 export default Navbar;
