@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ABCompany from "./pages/ABCompany";
 import ABSchool from "./pages/ABSchool";
 import ClassTuition from "./pages/ClassTuition";
+import Outreach from "./pages/Outreach";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
@@ -22,12 +24,14 @@ function App() {
         <Route path="/ab-company" element={<ABCompany />} />
         <Route path="/ab-school" element={<ABSchool />} />
         <Route path="/class-tuition" element={<ClassTuition />} />
+        <Route path="/outreach" element={<Outreach />} />
         <Route path="/events" element={<Events />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -71,7 +71,6 @@
   flex-direction: column;
   justify-content: center; /* vertical center */
   align-items: center;     /* horizontal center */
-
   text-align: center; /* center text */
   backdrop-filter: blur(2px);
   padding: 0 20px;
@@ -245,4 +244,9 @@
   color: var(--dusty-rose);
 }
 
-
+.newsletter-status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #7a3b7d;
+  text-align: center;
+}

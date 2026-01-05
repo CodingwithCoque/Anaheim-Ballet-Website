@@ -29,7 +29,6 @@
     position: relative;
   }
   
-  /* ACTIVE LINK (like your screenshot) */
   .navbar-links a.active {
     color: #3ccfcf;
   }

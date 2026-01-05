@@ -146,7 +146,7 @@ function Contact() {
             support performances, education, and outreach programs.
           </p>
 
-          <button className="donate-btn">Donate</button>
+          <a href="https://www.paypal.com/us/fundraiser/charity/194253"><button className="donate-btn">Donate</button></a>
         </div>
 
       </section>
